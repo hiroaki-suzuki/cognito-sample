@@ -1,0 +1,16 @@
+<amplify-authenticator initialState="signIn">
+    <ng-template
+        amplifySlot="authenticated"
+        let-user="user"
+        let-signOut="signOut"
+    >
+        <h1>Home</h1>
+        <h2>Welcome, {{ user.username }}</h2>
+        <button (click)="signOut()">Sign Out</button>
+    </ng-template>
+</amplify-authenticator>
+
+<P>{{ nonAuthData }}</P>
+<P>{{ nonAuthData2 }}</P>
+<P>{{ authedData }}</P>
+<button (click)="fetchAuthedData()">fetch AutedData</button>
